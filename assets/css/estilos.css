@@ -1,0 +1,289 @@
+/* ===== SISTEMA ROKA - ESTILOS FUTURISTAS ===== */
+:root {
+    --bg-dark: #0f0c29;
+    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --primary-accent: rgba(13, 110, 253, 0.7);
+    --secondary-accent: rgba(108, 117, 125, 0.5);
+    --glass-bg: rgba(26, 26, 46, 0.85);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --text-light: #e9ecef;
+    --text-muted: #adb5bd;
+    --success: #28a745;
+    --danger: #dc3545;
+}
+
+/* === RESET Y ESTILOS BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: var(--text-light);
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* === CONTENEDORES PRINCIPALES === */
+.contenedor, .container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenedor::before, .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("") center/cover fixed;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+/* === COMPONENTES DE TARJETAS === */
+.section, .sectionn {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    margin: 1rem;
+    background: var(--glass-bg);
+    border-radius: 16px;
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover, .sectionn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* === FORMULARIOS === */
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+#nombre, #apellido, #cedula, #carnet, #usuario,
+#contrasena, #confirm, #pregunta, #respuesta,
+#preguntaDos, #respuestaDos, #tipo, #fecha {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--glass-border);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#nombre:focus, #apellido:focus, #cedula:focus,
+#carnet:focus, #usuario:focus, #contrasena:focus,
+#confirm:focus, #pregunta:focus, #respuesta:focus,
+#preguntaDos:focus, #respuestaDos:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: none;
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.login {
+    width: 100%;
+    max-width: 350px;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(33, 139, 188, 0.9), rgba(9, 53, 125, 0.9));
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.cont_img > img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin: 0 auto 1.5rem;
+}
+
+.cuadro {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cuadro:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.btn_inicio {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    background: rgba(112, 152, 204, 0.7);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn_inicio:hover {
+    background: rgba(134, 177, 233, 0.9);
+    box-shadow: 0 4px 20px rgba(134, 177, 233, 0.4);
+}
+
+.btn_inicio::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn_inicio:hover::after {
+    left: 100%;
+}
+
+/* === MENSAJES Y ALERTAS === */
+.exito, .error {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 8px;
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.3s ease-out forwards, fadeOut 0.3s ease-out 2s forwards;
+}
+
+.exito {
+    background: var(--success);
+    border-left: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+.error {
+    background: var(--danger);
+    border-left: 5px solid rgba(255, 255, 255, 0.5);
+}
+
+/* === EFECTOS Y ANIMACIONES === */
+@keyframes slideIn {
+    from { transform: translate(-50%, 100%); opacity: 0; }
+    to { transform: translate(-50%, 0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+/* === DISEÑO RESPONSIVE === */
+@media (max-width: 768px) {
+    .contenedor, .container {
+        padding: 1rem;
+        flex-direction: column;
+    }
+    
+    .section, .sectionn {
+        margin: 1rem 0;
+        max-width: 100%;
+    }
+    
+    .login {
+        margin-right: 0;
+        left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    #nombre, #apellido, #cedula, #carnet, #usuario,
+    #contrasena, #confirm, #pregunta, #respuesta,
+    #preguntaDos, #respuestaDos {
+        font-size: 14px;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    .btn_inicio {
+        padding: 0.6rem;
+    }
+}
+
+/* === ELEMENTOS ADICIONALES === */
+.letra {
+    color: var(--text-light);
+    margin-left: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.letra:hover {
+    color: var(--primary-accent);
+}
+
+.recup {
+    display: block;
+    text-align: center;
+    color: var(--text-light);
+    padding: 0.5rem;
+    margin-top: 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.recup:hover {
+    color: var(--primary-accent);
+    text-decoration: underline;
+}
+
+.detalles {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: var(--primary-accent);
+    border-radius: 6px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.detalles:hover {
+    background: rgba(13, 110, 253, 0.9);
+    transform: translateY(-2px);
+}

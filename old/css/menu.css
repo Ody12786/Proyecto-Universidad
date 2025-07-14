@@ -1,0 +1,126 @@
+/* Variables para colores */
+:root {
+    --color-bg: #2c3e50;
+    --color-bg-hover: #34495e;
+    --color-text: #ecf0f1;
+    --color-text-hover: #1abc9c;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Reset básico */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Contenedor del menú */
+  .menu-container {
+    background: var(--color-bg);
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    height: 70px;
+    justify-content: space-between;
+  }
+  
+  /* Botón hamburguesa */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    height: 3px;
+    background: var(--color-text);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  /* Menú principal */
+  .menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  /* Opciones del menú */
+  .opcion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+    cursor: pointer;
+    transition: color var(--transition-speed), background-color var(--transition-speed);
+    padding: 8px 12px;
+    border-radius: 10px;
+    user-select: none;
+  }
+  
+  .opcion img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1); /* Iconos blancos */
+    transition: filter var(--transition-speed);
+  }
+  
+  .opcion h4 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  /* Hover efectos */
+  .opcion:hover {
+    background-color: var(--color-bg-hover);
+    color: var(--color-text-hover);
+  }
+  
+  .opcion:hover img {
+    filter: brightness(0) saturate(100%) invert(42%) sepia(81%) saturate(746%) hue-rotate(141deg) brightness(91%) contrast(86%);
+  }
+  
+  /* Responsive: menú hamburguesa */
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+    }
+  
+    .menu {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background: var(--color-bg);
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+  
+    .menu.open {
+      max-height: 500px; /* Ajusta según número de opciones */
+    }
+  
+    .opcion {
+      width: 100%;
+      padding: 15px 0;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  
+    .opcion:last-child {
+      border-bottom: none;
+    }
+  }
+  

@@ -1,0 +1,157 @@
+/* ===== SISTEMA ROKA - ESTILOS FUTURISTAS ===== */
+:root {
+    --bg-dark: #0f0c29;
+    --bg-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    --primary-accent: rgba(13, 110, 253, 0.7);
+    --secondary-accent: rgba(108, 117, 125, 0.5);
+    --glass-bg: rgba(26, 26, 46, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+/* === CONTENEDORES PRINCIPALES === */
+.mostrar, 
+.mostrar_usuario,
+.mostrarTabla {
+    width: 70%;
+    min-width: 300px;
+    margin: 2rem auto;
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    backdrop-filter: blur(10px);
+    background: var(--glass-bg);
+    border-radius: 1rem;
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.36);
+    padding: 2rem;
+}
+
+/* === TARJETAS DE FORMULARIO === */
+.registro_persona, 
+.registro_usuario, 
+.tabla_usuario {
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem;
+    max-height: 80vh;
+    overflow-y: auto;
+    background: var(--glass-bg);
+    border-top: 3px solid var(--primary-accent);
+    border-bottom: 3px solid var(--primary-accent);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* === ELEMENTOS DE FORMULARIO === */
+#nombre, #apellido, #cedula, #carnet, 
+#carnett, #usuario, #contrasena, #confirm, 
+#pregunta, #respuesta, #preguntaDos, #respuestaDos,
+#tipo, #genero, #fecha {
+    height: 40px;
+    border-radius: 12px;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    margin: 0.75rem 0;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#nombre:focus, #apellido:focus, #cedula:focus, 
+#carnet:focus, #carnett:focus, #usuario:focus, 
+#contrasena:focus, #confirm:focus, #pregunta:focus,
+#respuesta:focus, #preguntaDos:focus, #respuestaDos:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: none;
+}
+
+/* === BOTONES === */
+.btn-avz {
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--primary-accent);
+    border: none;
+    color: white;
+    font-weight: 500;
+    margin: 1.5rem auto;
+    display: block;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-avz:hover {
+    background: rgba(13, 110, 253, 0.9);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(13, 110, 253, 0.3);
+    cursor: pointer;
+}
+
+.btn-avz::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-avz:hover::after {
+    left: 100%;
+}
+
+/* === DISEÑO RESPONSIVE === */
+@media (max-width: 1199.98px) {
+    .mostrar, .mostrar_usuario, .mostrarTabla {
+        width: 85%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .registro_persona, .registro_usuario, .tabla_usuario {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .mostrar, .mostrar_usuario, .mostrarTabla {
+        width: 95%;
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    .btn-avz {
+        width: 100%;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #nombre, #apellido, #cedula, #carnet, 
+    #carnett, #usuario, #contrasena, #confirm, 
+    #pregunta, #respuesta, #preguntaDos, #respuestaDos {
+        font-size: 14px;
+    }
+    
+    .fec, .rad {
+        position: static !important;
+        width: 100% !important;
+        margin: 1rem 0 !important;
+    }
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.mostrar.visible, 
+.mostrar_usuario.visible, 
+.mostrarTabla.visible {
+    opacity: 1;
+    animation: fadeIn 0.6s ease forwards;
+}

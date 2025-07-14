@@ -1,0 +1,505 @@
+/* estilizando formularios del sistma */
+
+
+.contenedor{
+    padding-top:50px;
+    width: 100%;
+    height: 100vh;
+    background:url("../img/roka.png");
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.Productos{
+    width: 50.3%;
+    min-width: 200px;
+    max-height: 500px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    display: none;
+}
+.respuesta, .request{
+    width: 100%;
+    height: 140px;
+    background: #0000004f;
+    width: 100%;
+    height: 180px;
+    overflow-x: hidden;
+    overflow-y:auto;
+
+}
+.column,.columnn{
+    width:100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top: 20px;
+    box-sizing: border-box;
+    /* background: #000; */
+
+}
+
+.azul{
+    width:100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    margin-top: 20px;
+    box-sizing: border-box;
+    /* background: #000; */
+
+}
+.columnn >div{
+  width:100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+/* 
+  background: #000; */
+}
+.columnn >div>#cedula{
+    transform: translateX(-0px);
+  }
+#aceptar{
+    height: 30px;
+    width: 20%;
+    margin-right: 20px;
+}
+.columni{
+    width:100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+}
+#lote,#cedula{
+    height: 20px;
+    border-radius: 20px;
+    width:40%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px 0;
+    border: none;
+
+}
+#bcv{
+    height: 20px;
+    border-radius: 20px;
+    width:20%;
+    padding: 3px;
+    
+    font-size: 16px;
+    margin: 20px 0;
+    margin-right: 25px;
+    border: none;
+
+}
+
+
+.casilla{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+
+.desple, .despleg{
+    z-index: 1000;
+    position:absolute;
+    top: 80px;
+}
+.completar{
+    transform: translateX(0px);
+    transform: translateY(13px);
+    background: rgba(214, 211, 211, 0.699);
+    z-index: 1000;
+    width: 250px;
+    min-height: 50px;
+    max-height: 120px;
+    display: none; 
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius:   0px  0px 10px 10px;
+    overflow-y: auto;
+    position:absolute;
+    left: 20px;
+}
+
+
+.exito-factura{
+    width: 45.3%;
+    min-width: 690px;
+    box-sizing: border-box;
+    margin: 30px auto;
+    max-height: 400px;
+   
+}
+.exito_factura{
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    /* overflow-y: auto; */
+    max-height: 350px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+
+}
+
+#tabla{
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+.cabe{
+    background: rgba(189, 202, 230, 0.349);
+    color: black;
+    text-transform: capitalize;
+}
+.completare{
+    transform: translateX(0px);
+    background: rgba(214, 211, 211, 0.699);
+    transform: translateY(-20px);
+    z-index: 1000;
+    width: 600px;
+    min-height: 40px;
+    max-height: 160px;
+    display: none; 
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius:   0px  0px 10px 10px;
+    overflow-y: auto;
+    position:absolute;
+    left: 10px;
+}
+#cod_materia,#lote,#cedula,#cantidad,#fecha,#cod_lote,#name,#tipo,#descripcion,
+#precio,#cantidadw{
+    height: 20px;
+    border-radius: 20px;
+    width:30%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+
+}.ced{
+    height: 20px;
+    border-radius: 20px;
+    width:80%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 0px;
+    border: none;
+}
+.factura{
+    position: relative;
+    z-index: 100;
+    margin-top: 20px;
+    /* background: #000; */
+    /* display: flex; */
+}
+.seccion_venta{
+    position: relative;
+    z-index: 500;
+}
+.facturar{
+    position: relative;
+    bottom: -230px;
+    /* right: -120px; */
+}
+.cont_factura{
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* background: #000; */
+}
+.cont_tem{
+    width: 100%;
+    top: 30px;
+    position: relative;  
+    /* background: #000; */
+    height:100px;
+    overflow-y: auto;
+}
+
+
+#gistrar,#gistra{
+    width: 100px;
+     position: relative;
+     height: 30px;
+     border-radius: 10px;
+     background: var(--bg-color);
+     border: none;
+     box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.35);
+    }
+    #agregar{
+        width: 100px;
+         position: relative;
+         left: 230px;
+         top: -50px;
+         height: 30px;
+         border-radius: 10px;
+         background: var(--bg-color);
+         border: none;
+         box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.35);
+        }
+    #gistrar:hover, #gistra:hover , #agregar:hover{
+        cursor: pointer;
+        background: var(--btn-hover);
+        box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.75);
+        color: #E9ECEF;
+        transition: .4s;
+    }
+    #vendd{
+        width: 80px;
+         position: relative;
+         left: 80%;
+         top: 10px;
+         height: 20px;
+         border-radius: 10px;
+         background: var(--bg-color);
+         border: none;
+         box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.35);
+         display: none;
+        }
+    #vendd:hover{
+        cursor: pointer;
+        background: var(--btn-hover);
+        box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.75);
+        color: #E9ECEF;
+        transition: .4s;
+    }
+
+.registro_producto{
+
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height: 550px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+}
+
+.mostrarTabla{
+    width: 58.3%;
+    min-width: 690px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    max-height: 600px;
+}
+.tabla_producto{
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    /* overflow-y: auto; */
+    max-height: 440px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+
+}
+
+.tabla-over{
+    overflow-y: auto;
+    max-height: 300px;
+
+}
+.columna-reporte{
+    width: 100%;
+    height: 60px;
+}
+
+.producto_inventariado{
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height: 450px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+}
+
+
+ .titulo{
+    position: relative;
+    font-size: 20px;
+
+    margin: 0 auto;
+}
+.cod,.pregunta,.respuesta,.ce,
+.talla_p,.Cantidad,.descripcion_p,.respuesta-cuatro,
+.respuesta-seis, .respuesta-siete{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+.pregunta-dos,.pregunta-tres,.no{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left:20px;
+    text-transform: capitalize;
+}
+.prenda,.respuesta-dos{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left:30px;
+    text-transform: capitalize;
+}
+
+.respuesta-tres,.tipo_prenda{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left:60px;
+    
+}
+
+.descripcion_p,.respuesta-cinco{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    position: relative;
+    left:85px;
+
+}
+
+.cantidad_compra,.precio_f{
+    height: 20px;
+    border-radius: 20px;
+    width:30%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+}
+#unidad, #metodo{
+    height: 28px;
+    border-radius: 20px;
+    width:30%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+
+}
+.minilote,.minicli,.minicant{
+    height: 20px;
+    border-radius: 20px;
+    width:10%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px 0;
+    border: none;
+}
+
+@media (min-width:560px) and (max-width:1100px){
+
+    .producto_inventariado{
+        border-radius: 1rem;
+        background-color:#E9ECEF;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        max-height: 350px;
+        padding-bottom:30px; 
+        border-top: 3px solid rgba(245, 133, 29, 0.849);
+        border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+    }
+    .Productos{
+        width: 68%;
+        min-width: 200px;
+        max-height: 350px;
+        box-sizing: border-box;
+        margin: 0px auto;
+        display: none;
+    }
+    .minilote,.minicli,.minicant{
+        height: 20px;
+        border-radius: 20px;
+        width:10%;
+        padding: 3px;
+        /* margin: 5px; */
+        font-size: 16px;
+        margin: 20px 0;
+        border: none;
+    }
+
+    .registro_producto{
+
+        border-radius: 1rem;
+        background-color:#E9ECEF;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        max-height: 350px;
+        padding-bottom:30px; 
+        border-top: 3px solid rgba(245, 133, 29, 0.849);
+        border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+    }
+    .columnn >div>#cedula{
+        transform: translateX(-60px);
+      }
+    
+    .mostrarTabla{
+        width: 68.3%;
+        min-width: 690px;
+        box-sizing: border-box;
+        margin: 30px auto;
+        max-height: 400px;
+    }
+    .tabla_producto{
+        border-radius: 1rem;
+        background-color:#E9ECEF;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px;
+        /* overflow-y: auto; */
+        max-height: 350px;
+        padding-bottom:30px; 
+        border-top: 3px solid rgba(245, 133, 29, 0.849);
+        border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+    
+    }
+
+
+
+
+    .tabla-over{
+        overflow-y: auto;
+        max-height: 250px;
+    
+    }
+
+
+}

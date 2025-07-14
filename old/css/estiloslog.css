@@ -1,0 +1,186 @@
+/* Variables CSS para colores y fuentes */
+:root {
+    --color-primary: #216bbb;
+    --color-primary-dark: #154a86;
+    --color-secondary: #096bcd;
+    --color-bg-gradient-start: #218bbb;
+    --color-bg-gradient-end: #0953ad;
+    --color-text-light: #f0f0f0;
+    --color-text-dark: #222;
+    --color-error: #c50202;
+    --color-success: #0c9e20;
+    --font-family: 'Roboto', sans-serif;
+  }
+  
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+  }
+  
+  /* Contenedor principal */
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: url("../img/foo.png") center/cover fixed no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Banner fijo superior */
+  .banner {
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  
+  /* Contenedor de imagen/logo */
+  .cont_img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(33, 107, 187, 0.5);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+    cursor: default;
+    position: relative;
+  }
+  
+  .cont_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .cont_img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Login box */
+  .login {
+    background: linear-gradient(135deg, var(--color-bg-gradient-start) 0%, var(--color-bg-gradient-end) 100%);
+    width: 350px;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text-light);
+  }
+  
+  /* Inputs */
+  .cuadro {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    color: var(--color-text-dark);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .cuadro::placeholder {
+    color: #999;
+  }
+  
+  .cuadro:focus {
+    box-shadow: 0 0 8px var(--color-primary);
+  }
+  
+  /* Botón */
+  .btn_inicio {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(112, 152, 204, 0.8);
+    color: var(--color-text-light);
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn_inicio:hover {
+    background-color: rgba(134, 177, 233, 0.9);
+  }
+  
+  /* Link de recuperación */
+  .recup {
+    margin-top: 15px;
+    color: var(--color-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    text-align: center;
+    display: block;
+  }
+  
+  .recup:hover {
+    color: var(--color-primary);
+  }
+  
+  /* Mensajes de error y éxito */
+  .mensajes {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 250px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: var(--color-text-light);
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    z-index: 9999;
+  }
+  
+  .mensajes.exito {
+    background-color: var(--color-success);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .mensajes.error {
+    background-color: var(--color-error);
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  
+  @media (max-width: 400px) {
+    .container {
+      padding: 20px 10px;
+    }
+  
+    .login {
+      width: 100%;
+      padding: 30px 20px;
+      border-radius: 12px;
+    }
+  
+    .cont_img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 20px;
+    }
+  }
+  

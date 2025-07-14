@@ -1,0 +1,337 @@
+/* estilizando formularios del sistma */
+
+
+.contenedor{
+    padding-top:50px;
+    width: 100%;
+    height: 100vh;
+    background:url("../img/roka.png");
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.Productos{
+    width: 58.3%;
+    min-width: 690px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    display: none;
+}
+.seccion_persona{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    /* background: #000; */
+}
+.respuesta, .request{
+    width: 100%;
+    height: 140px;
+    background: #0000004f;
+    width: 100%;
+    height: 180px;
+    overflow-x: hidden;
+    overflow-y:auto;
+
+}
+.column,.columnn,.columnni{
+    width:100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    box-sizing: border-box;
+    /* background: #000; */
+
+}
+.cuadro{
+    width:100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.prod_inv, .solicitud{
+    border-radius: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    margin-left: 5px;
+}
+.columni{
+    width:100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    box-sizing: border-box;
+
+}
+
+.casilla{
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    
+}
+#cod_materia,#lote,#cedula,#cantidad,#fecha,#cod_lote,#name,#talla,#nombre,#tipo,#descripcion,
+#precio,#cantidadw,#apellido,#afiliacion{
+    height: 20px;
+    border-radius: 20px;
+    width:20%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+#premernombre,#segundonombre{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    /* background: #000; */
+}
+/* esto es un input de clientes */
+#genero{
+    height: 26px;
+    border-radius: 20px;
+    width:20%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+
+.orden{
+    display: flex;
+    
+}
+
+td >label{
+    color:rgba(255, 0, 0, 0.862);
+
+}
+
+td >p{
+    color:rgba(15, 57, 2, 0.966);
+
+}
+
+td > .vm{
+    color:rgba(194, 129, 7, 0.966);
+}
+
+
+#valor{
+    height: 20px;
+    border-radius: 20px;
+    width:20%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#medida,#tipo,#talla{
+    height: 26px;
+    border-radius:20px;
+    width:20%;
+    padding: 3px;
+    /* margin: 5px; */
+    font-size: 16px;
+    margin: 20px auto;
+    border: none;
+    text-align: center;
+    text-transform: capitalize;
+
+}
+#btn-gg{
+    width: 100px;
+    position: relative;
+    left: 28%;
+    height: 20px;
+    border-radius: 10px;
+    background: var(--bg-color);
+    margin-bottom: 5px;
+    border: none;
+    box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.35);
+
+}
+
+.ora div{
+    width: 80%;
+    margin-bottom: 8px;
+    margin-left: 25%;
+    text-align: left;
+    text-transform: capitalize;
+}
+.ora h4{
+    text-align: center;
+}
+
+#camcan,#campre,#camcane{
+    width: 17%;
+}
+#gistrar,#gistra{
+    width: 100px;
+     position: relative;
+     height: 30px;
+     border-radius: 10px;
+     background: var(--bg-color);
+     border: none;
+     box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.35);
+    }
+
+    .estilo-boton{
+        width: 100px;
+        position: relative;
+        left: 18%;
+        height: 20px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        background: var(--bg-color);
+        border: none;
+        box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.35);
+
+    }
+    #gistrar:hover, #gistra:hover, #btn-gg:hover{
+        cursor: pointer;
+        background: var(--btn-hover);
+        box-shadow: 4px 4px 16px -5px rgba(9, 3, 3, 0.75);
+        color: #E9ECEF;
+        transition: .4s;
+    }
+
+
+
+.registro_producto{
+
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height: 450px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+}
+
+.mostrarTabla{
+    width: 58.3%;
+    min-width: 690px;
+    box-sizing: border-box;
+    margin: 0px auto;
+    display: none;
+}
+.tabla_producto{
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height: 450px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+
+}
+.productoha{
+    width:33.3%;
+    min-width: 100px;
+    border-radius: 1rem;
+    text-align: left;
+   
+
+}
+.org, .arg{
+    width: 100%;
+    /* background: #000; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.org > div{
+width: 50%;
+text-align: left;
+}
+
+#lot,#nom,#tip,#desc,#tal,#fecc{
+    width: 20%;
+    height: 25px;
+    border-radius: 5px
+}
+
+#cancam{
+    width: 10%;
+    height: 25px;
+    border-radius: 5px
+}
+.alerta{
+    color: red;
+}
+.normal{
+    color: green;
+}
+
+#estandar{
+    display:flex;
+    justify-content: space-between;
+    font-size: 20px;
+    text-align: center;}
+
+.producto_inventariadoha{
+    width: 50.3%;
+    min-width: 300px;
+    height: 370px;
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height: 500px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+
+}
+
+
+
+.producto_inventariado{
+    border-radius: 1rem;
+    background-color:#E9ECEF;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    max-height: 450px;
+    padding-bottom:30px; 
+    border-top: 3px solid rgba(245, 133, 29, 0.849);
+    border-bottom: 5px solid rgba(245, 133, 29, 0.849);
+}
